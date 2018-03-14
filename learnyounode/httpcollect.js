@@ -1,6 +1,6 @@
 /*****************************************************************************
   Created by: Vince Chang
-  Node School
+  Node School: learnyounode
   HTTP COLLECT (Exercise 8 of 13)
 
   Write a program that performs an HTTP GET request to a URL provided to you

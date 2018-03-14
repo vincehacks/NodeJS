@@ -1,6 +1,6 @@
 /*****************************************************************************
   Created by: Vince Chang
-  Node School
+  Node School: learnyounode
   FILTERED LS (Exercise 5 of 13)
 
   Create a program that prints a list of files in a given directory,

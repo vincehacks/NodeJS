@@ -1,6 +1,6 @@
 /*****************************************************************************
   Created by: Vince Chang
-  Node School
+  Node School: learnyounode
   MY FIRST I/O! (Exercise 3 of 13)
 
   Write a program that uses a single synchronous filesystem operation to

@@ -1,6 +1,6 @@
 /*****************************************************************************
   Created by: Vince Chang
-  Node School
+  Node School: learnyounode
   MAKE IT MODULAR (Exercise 6 of 13)
 
   This problem is the same as the previous but introduces the concept of

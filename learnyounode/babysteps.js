@@ -1,6 +1,6 @@
 /*****************************************************************************
   Created by: Vince Chang
-  Node School
+  Node School: learnyounode
   BABY STEPS (Exercise 2 of 13)
 
   Write a program that accepts one or more numbers as command-line arguments
