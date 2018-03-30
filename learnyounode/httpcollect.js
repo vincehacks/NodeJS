@@ -67,6 +67,8 @@
   // Call the get method to retreive data from the server
   http.get(process.argv[2],function(res){
 
+    console.log(res); 
+
     // Set up the correct string format
     res.setEncoding("utf8");
 
