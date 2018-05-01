@@ -14,3 +14,9 @@
  * Then use the Chalk documentation to achieve the desired styling: 
  * https://www.npmjs.com/package/chalk
  *****************************************************************************/
+
+const chalk = require('chalk');
+
+// Here are 2 solutions to the mission
+console.log(chalk.blue.bgKeyword('white')('Hello world!'));
+console.log(chalk.blue.bgWhite('Hello world!'));

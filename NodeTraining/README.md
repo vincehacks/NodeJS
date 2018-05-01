@@ -43,16 +43,16 @@ anything post, get, etc)
 ### Introduction to Node.JS
 
 
-#### Why Node.JS?
+#### What/Why Node.JS?
 - Node.JS is a **JavaScript** runtime built on **Chrome's V8 JavaScript engine
-- Node.js uses an event-driven, non-blocking I/O model that makes it
+- Node.JS uses an event-driven, non-blocking I/O model that makes it
 lightweight and efficient. As a result, most operations in Node.JS are
 **asynchronous**
-- Node.js' package ecosystem, **npm**, is the largest ecosystem of open source
+- Node.JS's package ecosystem, **npm**, is the largest ecosystem of open source
 libraries in the world.
 - Unlike older browsers, ***Chrome was built for JS first***. As a result. Its
 engine is really fast.
-- If JS runs fast in the browser, why not using it on the server or on any
+- If JS runs fast in the browser, why not use it on the server or on any
 desktop as well?
 - As a result, the exported Chrome V8 engine became Node.JS, with the addition
 of extra libraries to do things that are not allowed in JS: Reading files,
@@ -129,13 +129,10 @@ dependencies that should not be part of your production code:
 - Any other parameters would be added to that array at indexes 3, 4, etc.
 
 
-#### Other options for command line apps: Commander
-- Commander is a simple package that allows you to define different options for
+#### Other options for command line apps
+- `Commander` is a simple package that allows you to define different options for
 your command line app
-
-
-#### Other options for command line apps: Prompt
-- Prompt is a simple package that allows you to interact with the user by
+- `Prompt` is a simple package that allows you to interact with the user by
 asking questions
 
 
@@ -159,7 +156,7 @@ run with `npm run [script-name]`
 
 #### What is the process object?
 - The `process` object provides information about, and control over, the
-current Node.js process'
+current Node.JS process
 - As a global, it is always available to Node.JS applications without using
 `require()`
 - Some examples of properties and methods of that object:
@@ -172,16 +169,16 @@ current Node.js process'
 - We can hook Node.JS to the Google Chrome Developer tools in order to debug
 Node.JS code
 - To do so, open chrome://inspect in Chrome
-- Then run your Node.js app as follows: `node --inspect-brk file.js`
+- Then run your Node.JS app as follows: `node --inspect-brk file.js`
 
 
 ### Asynchronous Programming
 
 
 #### Why is asynchronous programming important?
-- Node.JS is single-threaded, yet claims to have an event-driven, non-blocking
-I/O model that makes it lightweight and efficient
-- How can Node be non-blocking  if it has a single-thread? How could it
+- Node.JS is **single-threaded**, yet claims to have an event-driven,
+non-blocking I/O model that makes it lightweight and efficient
+- How can Node be non-blocking if it has a single-thread? How could it
 possibly handle multiple tasks at once in that case?
 - The answer lies in a mechanism called the ***event loop***
 - Whenever a task is handled ***asynchronously***, Node.JS will make it run
@@ -192,6 +189,9 @@ within the event loop, thus freeing Node’s main thread from that task
 - It’s a mechanism that delegates tasks to worker threads of the OS
 - Node periodically checks for updates from the event loop to be notified when
 tasks are completed
+- This is a ***single thread***
+- If a process takes a long time, it will go into the event loop but still use
+a single thread
 
 
 #### How to handle asynchronous code?
@@ -207,10 +207,12 @@ invoked whenever the task completes.
 - The easiest way to serve static content is to use the `http-server` module
 - It starts a local server on port 8080 that serves content from a local folder
 of your choice
+- If you want to change the port you can do `http-server -p 9000`
 
 
 #### How to write a basic HTTP server?
 - You can use the default `http module` from Node.JS
+- Import the module, call http.createServer(), listen
 
 
 #### How to write a more advanced HTTP server?
@@ -220,7 +222,10 @@ npm
 
 
 #### How to make a HTTP request?
-- The `http module` of Node.JS is the default option but is a verbose one
+- The `http module` of Node.JS is the default option but is a verbose one, you
+would have to keep appending the response because the data comes in chunks,
+after the data is all there, you can console log it...its a lot of work, so we
+use modules to help us do this process
 
 
 #### Making a HTTP request with node-fetch

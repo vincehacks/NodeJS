@@ -15,3 +15,16 @@
  * documentation:
  * https://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener
  *****************************************************************************/
+
+const fs = require('fs');
+
+// The file sample-file.txt will be a parameter in the command line, so I would
+// access it by process.argv[2];
+fs.watchFile(process.argv[2],(curr,prev) => {
+  
+  // To be notified when the file was modified, not just accessed, it is
+  // necessary to compare curr.mtime and prev.mtime.
+	if(curr.mtime != prev.mtime){
+		console.log("The file has changed");
+	}
+});
