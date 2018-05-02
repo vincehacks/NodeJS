@@ -1,7 +1,7 @@
 /******************************************************************************
  * Created by Vince Chang
  * 
- * Lab 9 - Basic HTTP Server
+ * Lab 7 - Basic HTTP Server
  * 
  * Your mission: Install express with npm. Create a new file express-server.js
  * and use the express module to create a basic server that runs on port 8000.
