@@ -1,5 +1,7 @@
 # Node JS Training
 
+Created by Vince Chang </br>
+
 Instructor: Alain (Al)  </br>
 Email: al@interstate21.com </br>
 
@@ -256,6 +258,22 @@ which requires a npm account
 
 #### How to write a basic HTTP Server with Express?
 - Config is similar to other server modules like express.
+```
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (request, resp) => {
+   resp.send('<h1>Hello from Express!</h1>')
+});
+
+// We can serve static content too!
+app.use('/data', express.static('content'));
+
+app.listen(port, (err) => {
+   console.log(`server listening on ${port}`)
+});
+```
 
 
 #### Express is based on middle ware functions
@@ -265,11 +283,12 @@ which requires a npm account
 app.listen(3000);
 `
 
+- What is different here is that express is a function we store in app
 - .get : HTTP method for which the middleware function applies
 - '/' : Path (route) for which the middleware function applies
 - function(req,res,next): The middleware function
-- req: HTTP request argument to the function
-- res: HTTP response argument to the function
+- req: HTTP request argument to the function (FROM CLIENT TO SERVER)
+- res: HTTP response argument to the function (FROM SERVER BACK TO CLIENT)
 - next: Callback argument to the next middleware function
 - req, res, and next are parameter names used by convention, though actual
 parameter names do not matter in javascript
