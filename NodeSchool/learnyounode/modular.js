@@ -36,10 +36,10 @@
 
   These four things are the contract that your module must follow:
 
-   1. Export a single function that takes exactly the arguments described.
-   2. Call the callback exactly once with an error or some data as described.
-   3. Don't change anything else, like global variables or stdout.
-   4. Handle all the errors that may occur and pass them to the callback.
+    1. Export a single function that takes exactly the arguments described.
+    2. Call the callback exactly once with an error or some data as described.
+    3. Don't change anything else, like global variables or stdout.
+    4. Handle all the errors that may occur and pass them to the callback.
 
   The benefit of having a contract is that your module can be used by anyone
   who expects this contract. So your module could be used by anyone else who
@@ -52,7 +52,7 @@
   export, you assign your function to the module.exports object, overwriting
   what is already there:
 
-     module.exports = function (args) { }
+    module.exports = function (args) { }
 
   Or you can use a named function and assign the name.
 
@@ -61,7 +61,7 @@
   only difference is that for local modules must be prefixed with './'. So,
   if your file is named mymodule.js then:
 
-     var mymodule = require('./mymodule.js')
+    var mymodule = require('./mymodule.js')
 
   The '.js' is optional here and you will often see it omitted.
 
@@ -72,18 +72,18 @@
   Also keep in mind that it is idiomatic to check for errors and do
   early-returns within callback functions:
 
-     function bar (callback) {
-       foo(function (err, data) {
-         if (err)
-           return callback(err) // early return
+    function bar (callback) {
+      foo(function (err, data) {
+        if (err)
+          return callback(err) // early return
 
-         // ... no error, continue doing cool things with `data`
+        // ... no error, continue doing cool things with `data`
 
-         // all went well, call callback with `null` for the error argument
+        // all went well, call callback with `null` for the error argument
 
-         callback(null, data)
-       })
-     }
+        callback(null, data)
+      })
+    }
  ****************************************************************************/
 
   // Require the module that I created that does the logic
@@ -91,11 +91,11 @@
 
   // Call the module that I made that takes the requirements as parameters
   mymodule(process.argv[2],process.argv[3],function(err,list){
-    
+
     // Error check
     if(err) console.log(err);
 
-    // Loop though 
+    // Loop though
     for(i = 0; i < list.length; i++)
       console.log(list[i]);
   })

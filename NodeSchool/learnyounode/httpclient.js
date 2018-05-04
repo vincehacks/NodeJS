@@ -21,13 +21,13 @@
 
   Unlike other callback functions, this one has the signature:
 
-     function callback (response) { }
+    function callback (response) { }
 
   Where the response object is a Node Stream object. You can treat Node
   Streams as objects that emit events. The three events that are of most
   interest are: "data", "error" and "end". You listen to an event like so:
 
-     response.on("data", function (data) { })
+    response.on("data", function (data) { })
 
   The "data" event is emitted when a chunk of data is available and can be
   processed. The size of the chunk depends upon the underlying data source.

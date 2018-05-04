@@ -36,7 +36,6 @@
   Documentation on the path module can be found by pointing your browser
   here:
   file:///usr/local/lib/node_modules/learnyounode/node_apidoc/path.html
-
  ****************************************************************************/
 
   // Import modules
@@ -45,7 +44,7 @@
 
   // Read the directory
   fs.readdir(process.argv[2], function(err,list){
-    
+
     // Error check
     if(err) console.log(err);
 

@@ -36,10 +36,10 @@
 
   These four things are the contract that your module must follow:
 
-   1. Export a single function that takes exactly the arguments described.
-   2. Call the callback exactly once with an error or some data as described.
-   3. Don't change anything else, like global variables or stdout.
-   4. Handle all the errors that may occur and pass them to the callback.
+    1. Export a single function that takes exactly the arguments described.
+    2. Call the callback exactly once with an error or some data as described.
+    3. Don't change anything else, like global variables or stdout.
+    4. Handle all the errors that may occur and pass them to the callback.
 
   The benefit of having a contract is that your module can be used by anyone
   who expects this contract. So your module could be used by anyone else who
@@ -52,7 +52,7 @@
   export, you assign your function to the module.exports object, overwriting
   what is already there:
 
-     module.exports = function (args) { }
+    module.exports = function (args) { }
 
   Or you can use a named function and assign the name.
 
@@ -61,7 +61,7 @@
   only difference is that for local modules must be prefixed with './'. So,
   if your file is named mymodule.js then:
 
-     var mymodule = require('./mymodule.js')
+    var mymodule = require('./mymodule.js')
 
   The '.js' is optional here and you will often see it omitted.
 
@@ -72,47 +72,47 @@
   Also keep in mind that it is idiomatic to check for errors and do
   early-returns within callback functions:
 
-     function bar (callback) {
-       foo(function (err, data) {
-         if (err)
-           return callback(err) // early return
+    function bar (callback) {
+      foo(function (err, data) {
+        if (err)
+          return callback(err) // early return
 
-         // ... no error, continue doing cool things with `data`
+        // ... no error, continue doing cool things with `data`
 
-         // all went well, call callback with `null` for the error argument
+        // all went well, call callback with `null` for the error argument
 
-         callback(null, data)
-       })
-     }
+        callback(null, data)
+      })
+    }
  ****************************************************************************/
 
   // Import modules
-	var fs = require('fs');
-	var path = require('path');
+  var fs = require('fs');
+  var path = require('path');
 
-	// Need to export this function to use in the modular.js file
-	module.exports = function (directory,filter,callback){
+  // Need to export this function to use in the modular.js file
+  module.exports = function (directory,filter,callback){
 
-		// Read the directory and deal with the logic to find the correct ext
-		fs.readdir(directory, function(err,list){
+    // Read the directory and deal with the logic to find the correct ext
+    fs.readdir(directory, function(err,list){
 
-			// Error check, return here because don't want to execute the rest
-			// If there is an error, I pass the error to the callback function that
-			// was passed in!
-			if(err) return callback(err);
+      // Error check, return here because don't want to execute the rest
+      // If there is an error, I pass the error to the callback function that
+      // was passed in!
+      if(err) return callback(err);
 
-			// i.e ".html"
-			var ext = '.' + filter;
-			var result = [];
+      // i.e ".html"
+      var ext = '.' + filter;
+      var result = [];
 
-			// Loop through the array of file names and if the file matches the
-			// ext name, then push the file name to the result array
-			for(i = 0; i < list.length; i++){
-				if(path.extname(list[i]) == ext)
-				  result.push(list[i]);
-			}
+      // Loop through the array of file names and if the file matches the
+      // ext name, then push the file name to the result array
+      for(i = 0; i < list.length; i++){
+        if(path.extname(list[i]) == ext)
+          result.push(list[i]);
+      }
 
-			// If I make it down here, err will be null bc there is no error!
-			callback(err,result);
-		})
-	}
+      // If I make it down here, err will be null bc there is no error!
+      callback(err,result);
+    })
+  }

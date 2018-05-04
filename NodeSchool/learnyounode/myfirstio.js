@@ -18,7 +18,7 @@
   module, use the following incantation:
 
   var fs = require('fs')
-   
+
   Now you have the full fs module available in a variable named fs.
 
   All synchronous (or blocking) filesystem methods in the fs module end with

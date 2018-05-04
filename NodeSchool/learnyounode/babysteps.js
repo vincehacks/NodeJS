@@ -36,14 +36,14 @@
   Number(process.argv[2]).
  ****************************************************************************/
 
-// Save the process length
-var processSize = process.argv.length;
-var sum = 0;
+  // Save the process length
+  var processSize = process.argv.length;
+  var sum = 0;
 
-// Loop through and add the numbers together, need to cast string to number.
-for(i = 2;  i < processSize; i++){
-  sum += Number(process.argv[i]);
-}
+  // Loop through and add the numbers together, need to cast string to number.
+  for(i = 2;  i < processSize; i++){
+    sum += Number(process.argv[i]);
+  }
 
-// Print the output
-console.log(sum);
+  // Print the output
+  console.log(sum);

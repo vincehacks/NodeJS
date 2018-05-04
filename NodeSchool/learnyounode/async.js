@@ -33,15 +33,15 @@
   file:///usr/local/lib/node_modules/learnyounode/node_apidoc/fs.html
  ****************************************************************************/
 
-// Import modules
-var fs = require('fs');
+  // Import modules
+  var fs = require('fs');
 
-// Use the asynchronous way to read a file
-fs.readFile(process.argv[2],"utf8", function (err,buffer) {
+  // Use the asynchronous way to read a file
+  fs.readFile(process.argv[2],"utf8", function (err,buffer) {
 
-  // Error check
-  if (err) console.log(err);
+    // Error check
+    if (err) console.log(err);
 
-  var stringArr = buffer.split('\n');
-  console.log(stringArr.length-1);
-})
+    var stringArr = buffer.split('\n');
+    console.log(stringArr.length-1);
+  })
