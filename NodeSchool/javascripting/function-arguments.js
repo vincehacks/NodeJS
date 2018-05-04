@@ -10,13 +10,13 @@
 
   Here is an example:
 
-     function example (firstArg, secondArg) {
-       console.log(firstArg, secondArg);
-     }
+    function example (firstArg, secondArg) {
+      console.log(firstArg, secondArg);
+    }
 
   We can call that function with two arguments like this:
 
-     example('hello', 'world');
+    example('hello', 'world');
 
   The above example will print to the terminal hello world.
 
@@ -34,7 +34,7 @@
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify function-arguments.js
+    javascripting verify function-arguments.js
  ****************************************************************************/
 
   function math (a,b,c){

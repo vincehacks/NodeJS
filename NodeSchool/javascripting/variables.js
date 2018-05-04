@@ -1,4 +1,4 @@
-/* 
+/*
   Created By: Vince Chang
   Node School: javascripting
   VARIABLES (Exercise 2 of 19)
@@ -17,7 +17,7 @@
   Here's an example of defining a variable, making it reference a specific
   value:
 
-     var example = 'some string';
+    var example = 'some string';
 
   The challenge:
 

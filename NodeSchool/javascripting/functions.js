@@ -9,31 +9,31 @@
 
   Here is an example:
 
-     function example (x) {
-       return x * 2;
-     }
+    function example (x) {
+      return x * 2;
+    }
 
   We can call that function like this to get the number 10:
 
-     example(5)
+    example(5)
 
   The above example assumes that the example function will take a number as
   an argument –– as input –– and will return that number multiplied by 2.
-   
+
   The challenge:
 
   Define a function named eat that takes an argument named food that is
   expected to be a string. Inside the function return the food argument like
   this:
 
-     return food + ' tasted really good.';
+    return food + ' tasted really good.';
 
   Inside of the parentheses of console.log(), call the eat() function with
   the string bananas as the argument.
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify functions.js
+    javascripting verify functions.js
  ****************************************************************************/
 
   function eat (food){

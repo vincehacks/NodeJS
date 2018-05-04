@@ -6,8 +6,8 @@
 
   An array is a list of values. Here's an example:
 
-     var pets = ['cat', 'dog', 'rat'];
-   
+    var pets = ['cat', 'dog', 'rat'];
+
   The challenge:
 
   Define a variable named pizzaToppings that references an
@@ -18,7 +18,7 @@
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify arrays.js
+    javascripting verify arrays.js
  ****************************************************************************/
 
 	var pizzaToppings = ['tomato sauce','cheese','pepperoni'];

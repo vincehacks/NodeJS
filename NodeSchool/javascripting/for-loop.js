@@ -7,12 +7,12 @@
   For loops allow you to repeatedly run a block of code a certain number of
   times. This for loop logs to the console ten times:
 
-     for (var i = 0; i < 10; i++) {
-       // log the numbers 0 through 9
-       console.log(i)
-     }
+    for (var i = 0; i < 10; i++) {
+      // log the numbers 0 through 9
+      console.log(i)
+    }
 
-  The first part, var i = 0, is run once at the beginning of the loop. The  
+  The first part, var i = 0, is run once at the beginning of the loop. The
   variable i is used to track how many times the loop has run.
 
   The second part, i < 10, is checked at the beginning of every loop
@@ -27,7 +27,7 @@
 
   The challenge:
 
-  Define a variable named total and make it equal the number 0. Define a 
+  Define a variable named total and make it equal the number 0. Define a
   second variable named limit and make it equal the number 10. Create a for
   loop with a variable i starting at 0 and increasing by 1 each time through
   the loop. The loop should run as long as i is less than limit.
@@ -35,14 +35,14 @@
   On each iteration of the loop, add the number i to the total variable. To
   do this, you can use this statement:
 
-     total += i;
+    total += i;
 
   After the for loop, use console.log() to print the total variable to the
   terminal.
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify for-loop.js
+    javascripting verify for-loop.js
  ****************************************************************************/
 
   var total = 0;

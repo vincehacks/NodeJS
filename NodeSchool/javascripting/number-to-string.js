@@ -7,8 +7,8 @@
   Sometimes you will need to turn a number into a string. In those instances
   you will use the .toString() method. Here's an example:
 
-     var n = 256;
-     n = n.toString();
+    var n = 256;
+    n = n.toString();
 
   The challenge:
 
@@ -18,7 +18,7 @@
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify number-to-string.js
+    javascripting verify number-to-string.js
  ****************************************************************************/
 
   var n = 128;

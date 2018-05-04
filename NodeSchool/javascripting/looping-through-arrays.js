@@ -10,7 +10,7 @@
   Each item in an array is identified by a number, starting at 0. So in this
   array hi is identified by the number 1:
 
-     var greetings = ['hello', 'hi', 'good morning'];
+    var greetings = ['hello', 'hi', 'good morning'];
 
   It can be accessed like this:  greetings[1];
 
@@ -21,21 +21,21 @@
 
   Define a variable named pets that references this array:
 
-     ['cat', 'dog', 'rat'];
+    ['cat', 'dog', 'rat'];
 
   Create a for loop that changes each string in the array so that they are
   plural. You will use a statement like this inside the for loop:
 
-     pets[i] = pets[i] + 's';
+    pets[i] = pets[i] + 's';
 
   After the for loop, use console.log() to print the pets array to the
   terminal.
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify looping-through-arrays.js
+    javascripting verify looping-through-arrays.js
  ****************************************************************************/
-  
+
   var pets = ['cat', 'dog', 'rat'];
 
   for(var i = 0; i < pets.length; i++)

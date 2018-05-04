@@ -5,7 +5,7 @@
  *****************************************************************************
 
   Scope is the set of variables, objects, and functions you have access to.
-   
+
   JavaScript has two scopes: global and local. A variable that is declared
   outside a function definition is a global variable, and its value is
   accessible and modifiable throughout your program. A variable that is
@@ -18,53 +18,52 @@
 
   Pay attention to the comments in the code below:
 
-     // a is a global variable, it can be accessed by the functions below
-     var a = 4;
+    // a is a global variable, it can be accessed by the functions below
+    var a = 4;
 
-     function foo() {
-         // b cannot be accessed outside foo, but can be accessed by functions
-         var b = a * 3;
-         // defined inside foo
-         function bar(c) {
-         // another `b` variable is created inside bar function scope
-         var b = 2;
-         // the changes to this new `b` variable don't affect the old `b`  
-         console.log( a, b, c );
-         }
+    function foo() {
+      // b cannot be accessed outside foo, but can be accessed by functions
+      var b = a * 3;
+      // defined inside foo
+      function bar(c) {
+      // another `b` variable is created inside bar function scope
+      var b = 2;
+      // the changes to this new `b` variable don't affect the old `b`
+      console.log( a, b, c );
+    }
 
-         bar(b * 4);
-     }
+    bar(b * 4);
+    }
 
-     foo(); // 4, 2, 48
+    foo(); // 4, 2, 48
 
   IIFE, Immediately Invoked Function Expression, is a common pattern for
   creating local scopes.
 
   Example:
 
-         (function(){ // the function expression is surrounded by parenthesis
-             // variables defined here
-             // can't be accessed outside
-         })(); // the function is immediately invoked
+    (function(){ // the function expression is surrounded by parenthesis
+      // variables defined here
+      // can't be accessed outside
+    })(); // the function is immediately invoked
 
   The challenge:
-   
+
   In that file, copy the following code:
 
-     var a = 1, b = 2, c = 3;
+    var a = 1, b = 2, c = 3;
 
-     (function firstFunction(){
-         var b = 5, c = 6;
+    (function firstFunction(){
+      var b = 5, c = 6;
 
-         (function secondFunction(){
-             var b = 8;
+      (function secondFunction(){
+        var b = 8;
 
-             (function thirdFunction(){
-                 var a = 7, c = 9;
+        (function thirdFunction(){
+          var a = 7, c = 9;
 
-                 (function fourthFunction(){
-                     var a = 1, c = 8;
-
+          (function fourthFunction(){
+            var a = 1, c = 8;
                  })();
              })();
          })();
@@ -73,11 +72,11 @@
   Use your knowledge of the variables' scope and place the following code
   inside one of the functions in scope.js so the output is a: 1, b: 8, c: 6
 
-     console.log("a: "+a+", b: "+b+", c: "+c);
+    console.log("a: "+a+", b: "+b+", c: "+c);
 
   Check to see if your program is correct by running this command:
 
-     javascripting verify scope.js
+    javascripting verify scope.js
  ****************************************************************************/
 
   var a = 1, b = 2, c = 3;
@@ -91,7 +90,7 @@
                var a = 7, c = 9;
                (function fourthFunction(){
                    var a = 1, c = 8;
-               })();  
-           })();  
-       })();  
+               })();
+           })();
+       })();
    })();

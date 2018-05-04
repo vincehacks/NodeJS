@@ -7,8 +7,8 @@
   You will often need to know how many characters are in a string. For this
   you will use the .length property. Here's an example:
 
-     var example = 'example string';
-     example.length
+    var example = 'example string';
+    example.length
 
   The challenge:
 
