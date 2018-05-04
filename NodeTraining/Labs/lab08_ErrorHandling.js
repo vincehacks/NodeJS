@@ -1,8 +1,8 @@
 /******************************************************************************
  * Created by Vince Chang
- * 
+ *
  * Lab 8 - Error Handling
- * 
+ *
  * Your mission: Using the web server we wrote during lab #1, add custom error
  * handling when a user tries to access an unknown URL:
  *
@@ -50,5 +50,5 @@ app.use(logErrors)
 
 // Tell the server to listen on port 8000
 app.listen(port, (err) => {
-   console.log(`server listening on ${port}`)
+  console.log(`server listening on ${port}`)
 });

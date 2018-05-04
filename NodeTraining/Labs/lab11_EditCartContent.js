@@ -1,8 +1,8 @@
 /******************************************************************************
  * Created by Vince Chang
- * 
+ *
  * Lab 11 - See and Edit Cart Contents
- * 
+ *
  * In this lab, we’re going to create a server endpoint to render cart items.
  *
  * Your mission: Using the web server we wrote during lab #4, create a new
@@ -37,36 +37,36 @@ app.use('/data', express.static('data/plates.json'));
 // PREVIOUS LAB
 app.put('/cart/:id' , (request,resp) => {
 
-	// Retrieving the plates in an object, require parses the json already!
-	let plates = require('./data/plates.json');
-	// Gets the id from the URL
-	let id = request.params.id;
-	// Looks if the plate id is in the data from plates.json
-	let foundPlate = plates.find((item) => item._id == id);
+  // Retrieving the plates in an object, require parses the json already!
+  let plates = require('./data/plates.json');
+  // Gets the id from the URL
+  let id = request.params.id;
+  // Looks if the plate id is in the data from plates.json
+  let foundPlate = plates.find((item) => item._id == id);
 
-	// Messages if found
-	if(foundPlate){
-		cart.push(foundPlate);
-		resp.send(`Plate ${id} was added to the cart`);
-	}
-	else{
-		throw new Error(`Plate with ${id} was not found`);
-	}
+  // Messages if found
+  if(foundPlate){
+    cart.push(foundPlate);
+    resp.send(`Plate ${id} was added to the cart`);
+  }
+  else{
+    throw new Error(`Plate with ${id} was not found`);
+  }
 });
 
 // START HERE FOR THIS LAB
 
 // Sends the cart to the client
 app.get('/cart',(req,res) => {
-	res.send(cart);
+  res.send(cart);
 });
 
 // Deletes Item from cart
 app.delete('/cart/:id' , (request,resp) => {
 
-	let id = request.params.id;
-	cart = cart.filter((item) => item._id != id);
-	resp.send(`Plate ${id} removed from the cart`);
+  let id = request.params.id;
+  cart = cart.filter((item) => item._id != id);
+  resp.send(`Plate ${id} removed from the cart`);
 
 });
 
@@ -83,5 +83,5 @@ app.use(logErrors)
 
 // Tell the server to listen on port 8000
 app.listen(port, (err) => {
-   console.log(`server listening on ${port}`)
+  console.log(`server listening on ${port}`)
 });
