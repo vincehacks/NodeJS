@@ -11,7 +11,7 @@ Created by Vince Chang </br>
 
 # Day 1
 
-- This course illustrates the use of NodeJS. The exercises in the labs are
+This course illustrates the use of NodeJS. The exercises in the labs are
 creating the back-end for a website that allows users to shop for different
 license plates.
 
