@@ -2,9 +2,6 @@
 
 Created by Vince Chang </br>
 
-Instructor: Alain (Al)  </br>
-Email: al@interstate21.com </br>
-
 [Day 1](https://goo.gl/qcqPcB)
 
 [Day 2](https://goo.gl/e1Cj86)
