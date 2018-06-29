@@ -107,8 +107,8 @@ dependencies that should not be part of your production code:
 
 
 #### Other options for command line apps
-- `Commander` is a simple package that allows you to define different options for
-your command line app
+- `Commander` is a simple package that allows you to define different options
+for your command line app
 - `Prompt` is a simple package that allows you to interact with the user by
 asking questions
 
